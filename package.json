@@ -1,0 +1,28 @@
+{
+  "name": "rollup_ts_test",
+  "version": "0.0.1",
+  "description": "Testbed for rollup + typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildJS": "set NODE_ENV=js&& rollup -c",
+    "buildTSPlugin": "set NODE_ENV=tsPlugin&& rollup -c",
+    "build": "set NODE_ENV=tsc_rollup&& tsc && rollup -c",
+    "serve": "npm run build && http-server ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "deepmerge": "^2.1.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.12.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
